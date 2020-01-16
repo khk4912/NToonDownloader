@@ -60,7 +60,7 @@ async def multi_crawl(id, no):
 
 def main():
     nwebId = int(input("웹툰 코드? :"))
-    nwebNo = input("화? :")
+    nwebNo = input("화? (1, 1-3...) :")
 
     if '-' in nwebNo:
         multiDownload = True
