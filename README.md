@@ -10,6 +10,6 @@ main.py가 있는 곳에 **downloads** 폴더를 만듭니다.
 여러 화도 -로 설정할 수 있습니다. (1-3을 입력하면 1에서 3화를 다운로드합니다.) 
 
 ![example](./img/1.png)
-![example](./img/2.png)
-![example](./img/3.png)
-![example](./img/4.png)
+![example2](./img/2.png)
+![example3](./img/3.png)
+![example4](./img/4.png)
