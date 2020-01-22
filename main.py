@@ -33,9 +33,9 @@ async def crawl(id, no):
     async with aiohttp.ClientSession(headers=headers) as session:
         async with session.get("https://comic.naver.com/webtoon/detail.nhn?titleId={}&no={}".format(id, no)) as r:
             c = await r.text()
-            soup = BeautifulSoup(c, "html.parser")
-            title = soup.find("title").text.split("::")[0].rstrip()
-            div = soup.find_all("img", {"alt":"comic content"})
+            soup = BeautifulSoup(c, "html.parser") #BeautifulSoup에서 html.parser 사용으로 설정
+            title = soup.find("title").text.split("::")[0].rstrip() #HTML에서 title 태그를 가져와서 ::로 나누고, 그 중 처음을 오른쪽 공백 제거 시켜 표시
+            div = soup.find_all("img", {"alt":"comic content"}) # HTML에서 Attribute로 alt="comic content"를 가지는 모든 img 태그를 가져온다.
             direc = "downloads/{}".format(title)
             if not os.path.exists(direc):
                 os.mkdir(direc)
